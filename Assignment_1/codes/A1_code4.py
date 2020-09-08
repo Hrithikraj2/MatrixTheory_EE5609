@@ -1,7 +1,7 @@
 import numpy as np
-X = np.array([[0.314,-4.873],[4.873,0.314]]);
+X = np.array([[-63,-54],[54,-63]]);
 
-Y = np.array([[0.192,0.038],[-0.038,0.192]]);
+Y = np.array([[3,4],[-4,3]]);
 
 # resultant matrix
 result = [ [0,0],[0,0]]

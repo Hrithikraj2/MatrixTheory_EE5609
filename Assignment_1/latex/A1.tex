@@ -266,37 +266,44 @@ Let $\vec{T_a}$ be the matrix of the complex number a, then b is defined to be t
 \end{align}
 Using Eq \eqref{eq:es17btech11009_1},
 \begin{align}
-    = \brak{\frac{1}{17}\myvec{1 \\ 4} - \frac{2}{5}\myvec{2 \\ -1}}\myvec{3 \\ -4} \frac{1}{26} \myvec{5 \\ 1}
+    = \brak{\frac{1}{17}\myvec{1 \\ 4} - \frac{2}{5}\myvec{2 \\ -1}}\myvec{3 \\ -4} \frac{1}{26} \myvec{5 \\ -1}
 \end{align}    
 \begin{align}
-    = \brak{\myvec{\frac{1}{17}  \\  \frac{4}{17}} - \myvec{\frac{4}{5}  \\  \frac{-2}{5}}} \myvec{3 \\ -4} \myvec{\frac{5}{26}  \\  \frac{-1}{26}}
+   = \brak{\myvec{\frac{1}{17} \\ \frac{4}{17}} - \myvec{\frac{4}{5} \\ -\frac{2}{5}}}\myvec{3 \\ -4} \frac{1}{26} \myvec{5 \\ -1}
 \end{align}
 \begin{align}
-    = \brak{\myvec{0.058 \\ 0.235} - \myvec{0.8 \\ -0.4}}\myvec{3 \\ -4}\myvec{0.192 \\ -0.038} \\
-    = \myvec{0.058-0.8 \\ 0.235+0.4}\myvec{3 \\ -4}\myvec{0.192 \\ -0.038}\\
-    = \myvec{-0.742 \\ 0.635}\myvec{3 \\ -4}\myvec{0.192 \\ -0.038}
+    = \myvec{\frac{1}{17} - \frac{4}{5} \\  \frac{4}{17} + \frac{2}{5}}  \myvec{3 \\ -4} \myvec{\frac{5}{26}  \\  \frac{-1}{26}}
+\end{align}
+\begin{align}
+    = \myvec{-\frac{63}{85} \\ \frac{54}{85}}\myvec{3 \\ -4}\myvec{ \frac{5}{26} \\ - \frac{1}{26}}
 \end{align}
 Using equivalent matrices for the complex numbers,
 \begin{align}
-   = \brak{\myvec{-0.742 & -0.635 \\ 0.635 & -0.742} \myvec{3 & 4 \\-4 & 3} \myvec{1 \\ 0} }\myvec{0.192 \\ -0.038} 
+   = \frac{1}{85}\brak{\myvec{-63 & -54 \\ 54 & -63} \myvec{3 & 4 \\-4 & 3} \myvec{1 \\ 0} } \frac{1}{26}\myvec{5 \\ -1}
+\end{align}
+\begin{align}
+     = \frac{1}{2210}\brak{\myvec{-63 & -54 \\ 54 & -63} \myvec{3 & 4 \\-4 & 3} \myvec{1 \\ 0} }\myvec{5 \\ -1} 
 \end{align}
 Matrix multiplication gives,
 \begin{align}
-    =\myvec{-2.226+2.54 & -2.968-1.905 \\1.905+2.968 & 2.54-2.226}\myvec{0.192 \\ -0.038} 
+    = \frac{1}{2210}\myvec{-189+216 & -162-252 \\ 162+252 & 216-189}\myvec{5 \\ -1}
 \end{align}
 \begin{align}
-   = \myvec{0.314 & -4.873 \\ 4.873 & 0.314}\myvec{0.192 \\ -0.038} \\
-    = \myvec{0.314 \\ 4.873} \myvec{0.192 \\ -0.038} 
+   =\frac{1}{2210}\myvec{27 & -414 \\ 414 & 27}\myvec{5 \\ -1} \\
+    = \frac{1}{2210}\myvec{27 \\ 414} \myvec{5 \\ -1} 
 \end{align}
 Again using equivalent and multiplying,
 \begin{align}
-    =  \myvec{ 0.314 & -4.873 \\  4.873 & 0.314} \myvec{ 0.192 & 0.038 \\ -0.038 & 0.192}\myvec{1 \\ 0} 
+    =  \frac{1}{2210}\myvec{ 27 & -414 \\  414 & 27} \myvec{5 & 1 \\ -1 & 5}\myvec{1 \\ 0} 
 \end{align}
 \begin{align}
-    = \myvec{0.245 & -0.9236 \\  0.9236 & 0.245}\myvec{1 \\ 0}
+    = \frac{1}{2210}\myvec{549 & -2043 \\ 2043 & 549}\myvec{1 \\ 0}
 \end{align}
 \begin{align}
-    \implies\vec{z} = \myvec{0.245 \\ 0.9236}
+    = \frac{1}{2210}\myvec{549 \\ 2043}
+\end{align}
+\begin{align}
+    \implies\vec{z} = \myvec{\frac{549}{2210} \\ \\ \frac{2043}{2210}}
 \end{align}
 
 \textbf{Python Code:}

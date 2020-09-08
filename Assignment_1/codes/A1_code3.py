@@ -1,7 +1,7 @@
 import numpy as np
 
-a=5
-b=1
+a=1
+b=-4
 D1 = np.array([1,0])
 M1 = np.array([[a,-b],[b,a]])
 M1inv=np.linalg.inv(M1)
