@@ -252,60 +252,27 @@ Inorder to simplify the above equation, we need to find the multiplicative inver
 We, first define the multiplicative inverse of a matrix of a complex number.
 Let $\vec{T_a}$ be the matrix of the complex number a, then b is defined to be the multiplicative inverse of a if
 \begin{align}
-    \vec{T_a}\vec{T_b} = \vec{I}
+    \vec{T_a}\vec{T_b} = \vec{I}\\ 
+    \vec{b} = \vec{a}^{-1} = \myvec{a_1 & -a_2 \\ a_2 & a_1}^{-1} \myvec{1 \\ 0}
+     = \frac{1}{\left\| a\right\|^2}\myvec{a_1 \\ -a_2}\label{eq:es17btech11009_1}\\
+      \vec{z} = \brak{\myvec{1 \\ -4}^{-1} - 2\myvec{2 \\ 1}^{-1}} \myvec{3 \\ -4} \myvec{5 \\ 1}^{-1}
 \end{align}
-\begin{align}
-    \vec{b} = \vec{a}^{-1} = \myvec{a_1 & -a_2 \\ a_2 & a_1}^{-1} \myvec{1 \\ 0} 
-\end{align}
-\begin{align}
-    = \frac{1}{\left\| a\right\|^2}\myvec{a_1 \\ -a_2}\label{eq:es17btech11009_1}
-\end{align}
-\begin{align}
-    \vec{z} = \brak{\myvec{1 \\ -4}^{-1} - 2\myvec{2 \\ 1}^{-1}} \myvec{3 \\ -4}
-     \myvec{5 \\ 1}^{-1}
-\end{align}
-Using Eq \eqref{eq:es17btech11009_1},
-\begin{align}
-    = \brak{\frac{1}{17}\myvec{1 \\ 4} - \frac{2}{5}\myvec{2 \\ -1}}\myvec{3 \\ -4} \frac{1}{26} \myvec{5 \\ -1}
-\end{align}    
-\begin{align}
-   = \brak{\myvec{\frac{1}{17} \\ \frac{4}{17}} - \myvec{\frac{4}{5} \\ -\frac{2}{5}}}\myvec{3 \\ -4} \frac{1}{26} \myvec{5 \\ -1}
-\end{align}
-\begin{align}
-    = \myvec{\frac{1}{17} - \frac{4}{5} \\  \frac{4}{17} + \frac{2}{5}}  \myvec{3 \\ -4} \myvec{\frac{5}{26}  \\  \frac{-1}{26}}
-\end{align}
-\begin{align}
-    = \myvec{-\frac{63}{85} \\ \frac{54}{85}}\myvec{3 \\ -4}\myvec{ \frac{5}{26} \\ - \frac{1}{26}}
-\end{align}
-Using equivalent matrices for the complex numbers,
-\begin{align}
-   = \frac{1}{85}\brak{\myvec{-63 & -54 \\ 54 & -63} \myvec{3 & 4 \\-4 & 3} \myvec{1 \\ 0} } \frac{1}{26}\myvec{5 \\ -1}
-\end{align}
-\begin{align}
-     = \frac{1}{2210}\brak{\myvec{-63 & -54 \\ 54 & -63} \myvec{3 & 4 \\-4 & 3} \myvec{1 \\ 0} }\myvec{5 \\ -1} 
-\end{align}
-Matrix multiplication gives,
-\begin{align}
-    = \frac{1}{2210}\myvec{-189+216 & -162-252 \\ 162+252 & 216-189}\myvec{5 \\ -1}
-\end{align}
-\begin{align}
-   =\frac{1}{2210}\myvec{27 & -414 \\ 414 & 27}\myvec{5 \\ -1} \\
-    = \frac{1}{2210}\myvec{27 \\ 414} \myvec{5 \\ -1} 
-\end{align}
-Again using equivalent and multiplying,
-\begin{align}
-    =  \frac{1}{2210}\myvec{ 27 & -414 \\  414 & 27} \myvec{5 & 1 \\ -1 & 5}\myvec{1 \\ 0} 
-\end{align}
-\begin{align}
-    = \frac{1}{2210}\myvec{549 & -2043 \\ 2043 & 549}\myvec{1 \\ 0}
-\end{align}
-\begin{align}
-    = \frac{1}{2210}\myvec{549 \\ 2043}
-\end{align}
-\begin{align}
-    \implies\vec{z} = \myvec{\frac{549}{2210} \\ \\ \frac{2043}{2210}}
-\end{align}
-
+Using Eq \eqref{eq:es17btech11009_1}, equivalent matrices for the complex numbers and matrix multiplication,
+\begin{multline}
+   = \brak{\frac{1}{17}\myvec{1 \\ 4} - \frac{2}{5}\myvec{2 \\ -1}}\myvec{3 \\ -4} \frac{1}{26} \myvec{5 \\ -1}\\
+    = \brak{\myvec{\frac{1}{17} \\ \frac{4}{17}} - \myvec{\frac{4}{5} \\ -\frac{2}{5}}}\myvec{3 \\ -4} \frac{1}{26} \myvec{5 \\ -1}\\
+     = \myvec{\frac{1}{17} - \frac{4}{5} \\  \frac{4}{17} + \frac{2}{5}}  \myvec{3 \\ -4} \myvec{\frac{5}{26}  \\  \frac{-1}{26}}\\
+    = \myvec{-\frac{63}{85} \\ \frac{54}{85}}\myvec{3 \\ -4}\myvec{ \frac{5}{26} \\ - \frac{1}{26}}\\
+      = \frac{1}{85}\brak{\myvec{-63 & -54 \\ 54 & -63} \myvec{3 & 4 \\-4 & 3} \myvec{1 \\ 0} } \frac{1}{26}\myvec{5 \\ -1}\\
+      = \frac{1}{2210}\brak{\myvec{-63 & -54 \\ 54 & -63} \myvec{3 & 4 \\-4 & 3} \myvec{1 \\ 0} }\myvec{5 \\ -1} \\
+       = \frac{1}{2210}\myvec{-189+216 & -162-252 \\ 162+252 & 216-189}\myvec{5 \\ -1}\\
+       =\frac{1}{2210}\myvec{27 & -414 \\ 414 & 27}\myvec{5 \\ -1}\\
+    = \frac{1}{2210}\myvec{27 \\ 414} \myvec{5 \\ -1} \\
+    =  \frac{1}{2210}\myvec{ 27 & -414 \\  414 & 27} \myvec{5 & 1 \\ -1 & 5}\myvec{1 \\ 0} \\
+     = \frac{1}{2210}\myvec{549 & -2043 \\ 2043 & 549}\myvec{1 \\ 0}\\
+      = \frac{1}{2210}\myvec{549 \\ 2043}\\
+      \implies\vec{z} = \myvec{\frac{549}{2210} \\ \\ \frac{2043}{2210}}
+\end{multline}
 \textbf{Python Code:}
 \begin{lstlisting}
 https://github.com/Hrithikraj2/MatrixTheory_EE5609/blob/master/Assignment_1/codes/A1_code1.py
