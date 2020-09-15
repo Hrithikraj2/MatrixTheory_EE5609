@@ -268,20 +268,59 @@ Evaluate the inverse of A.
     = \myvec{1 && 0 \\ 0 && 1} = I \\
     \implies AB = AA^{-1} = I \label{eq:es17btech11009_1}
 \end{multline}
+Now, We define B as follows
+\begin{align}
+    B = \myvec{p && q \\ r && s}
+\end{align}
 \begin{multline}
-    BA = A^{-1}A =\frac{1}{ad - bc}\myvec{d && -b \\ -c &&a}\myvec{a && b \\ c && d}\\
-    = \frac{1}{ad - bc}\myvec{d && -b \\ -c &&a}\myvec{a && b \\ c && d}\\
-    = \frac{1}{ad - bc}\myvec{da-bc && bd-bd \\ -ac+ac && -bc+ad}\\
-    = \frac{1}{ad - bc}\myvec{ad-bc && 0 \\ 0 && -bc+ad}\\
-    = \myvec{\frac{1}{ad - bc}\brak{ad-bc} && 0 \\ 0 && \frac{1}{ad - bc}\brak{ ad -bc}}\\
+    A = B^{-1} = \frac{1}{ps - qr}\myvec{s && -q \\ -r &&p}\\
+    BA = BB^{-1} = \myvec{p && q \\ r && s}\frac{1}{ps - qr}\myvec{s && -q \\ -r && p}\\
+    =\frac{1}{ps - qr}\myvec{p && q \\ r && s}\myvec{s && -q \\ -r && p}\\
+    = \frac{1}{ps - qr}\myvec{ps-qr && sr-sr \\ -pq+pq && -qr+ps}\\
+    =\frac{1}{ps - qr}\myvec{ps-qr && 0 \\ 0 && ps-qr}\\
+    = \myvec{\frac{1}{ps - qr}\brak{ps-qr} && 0 \\ 0 && \frac{1}{ps - qr}\brak{ ps -qr}}\\
     = \myvec{1 && 0 \\ 0 && 1} = I \\
-    \implies BA = A^{-1}A = I \label{eq:es17btech11009_2}
+    \implies BA = BB^{-1} = I \label{eq:es17btech11009_2}
 \end{multline}
 From Eq \eqref{eq:es17btech11009_1} and Eq \eqref{eq:es17btech11009_2},
 
-$AB = BA = I$.
+$AB = I , BA = I$.
 
-We can conclude that options A and D are correct
+We can conclude that option D is correct
+
+Statement - If AB = BA , then both A and B are invertible.
+
+Proof:
+
+Case 1 : We define A and B as follows
+\begin{align}
+    A = \myvec{a && 0 \\ 0 && b}\\
+    B = \myvec{c && 0 \\ 0 && d}
+\end{align}
+\begin{multline}
+    AB = \myvec{a && 0 \\ 0 && b}\myvec{c && 0 \\ 0 && d}\\
+       = \myvec{ac && 0 \\ 0 && bd}\\
+    BA = \myvec{c && 0 \\ 0 && d}\myvec{a && 0 \\ 0 && b}
+       = \myvec{ca && 0 \\ 0 && bd}\\
+       = \myvec{ac && 0 \\ 0 && bd}
+\end{multline}
+In the above example, AB =BA and both A and B are non - singular(invertible) matrices.
+
+Case 2 : We define A and B as follows
+\begin{align}
+    A = \myvec{a && a \\ a && a}\\
+    B = \myvec{b && b \\ b && b}
+\end{align}
+\begin{multline}
+    AB = \myvec{a && a \\ a && a}\myvec{b && b \\ b && b}\\
+       = \myvec{ab+ab && ab+ab \\ ab+ab && ab+ab}\\
+       = \myvec{2ab && 2ab \\ 2ab && 2ab}\\
+    BA = \myvec{b && b \\ b && b}\myvec{a && a \\ a && a}\\
+       = \myvec{ab+ab && ab+ab \\ ab+ab && ab+ab}\\
+       = \myvec{2ab && 2ab \\ 2ab && 2ab}
+\end{multline}
+In the above example, AB = BA and both A and B are non - invertible(singular) matrices.
+
 \textbf{Python Code:}
 \begin{lstlisting}
 https://github.com/Hrithikraj2/MatrixTheory_EE5609/blob/master/Assignment_2/codes/A2_code1.py
