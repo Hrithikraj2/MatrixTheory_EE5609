@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+    \draw (0,0) node[anchor=north]{$B$}-- (4,6) node[anchor=south]{$A$}-- (8,0) node[anchor=north]{$C$}-- cycle;
+    \draw (4,6) -- (4,0) node[anchor=north]{$D$};
+    \draw (4,0.5) -- (3.5,0.5) -- (3.5,0);
+    \begin{scope}[shift={(4,0)}]
+        \draw (135:0.75cm) node[anchor=east];
+    \end{scope}
+    \draw node at (4.2,3){$b$};
+    \draw node at (2,-0.2){$a$};
+    \draw node at (6,-0.2){$a$};
+\end{tikzpicture}
