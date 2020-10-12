@@ -180,63 +180,65 @@ Download latex-tikz codes from
 https://github.com/Hrithikraj2/MatrixTheory_EE5609/blob/master/Assignment_5/A5.tex
 \end{lstlisting}
 \section{\textbf{Question}}
-Draw the graphs of the equations
+The line 
 \begin{align}
-    \myvec{1 & -1}\vec{x} + 1 = 0 \label{eq:1}\\
-    \myvec{3 & 2}\vec{x} - 12 = 0 \label{eq:2}
+\myvec{-m & 1}\vec{x} = 1 \label{eq: 1}
 \end{align}
-Determine the coordinates of the vertices of the triangle formed by these lines and x-axis and shade the triangular region.
-
+is a tangent to the curve $y^2 = 4x$. Find the value of m
 \section{SOLUTION}
-Since we need to find the x intercept.Let
+Compare $y^2 = 4x$ to the general equation
 \begin{align}
-    \vec{x}= \myvec{a \\ 0}\label{eq:3}
+    ax^2 + 2bxy + cy^2 + 2dx + 2ey + f = 0
 \end{align}
-Substitute in Eq \eqref{eq:1}
+a=b=e=0, d=-2, c=1, f=0
 \begin{align}
-\implies\myvec{1 & -1}\myvec{a \\ 0} + 1 = 0\\
-\implies a + 1 = 0\\
-\implies a = -1
+  \vec{V} = \myvec{a & b \\ b & c} = \myvec{0 & 0 \\ 0 & 1}\\
+  \vec{u} = \myvec{d \\ e} = \myvec{-2 \\ 0}\\
+  \mydet{V} = \mydet{0 & 0 \\ 0 & 1} = 0
 \end{align}
-The intercept on x axis for Eq \eqref{eq:1} is
+ $\implies$ The curve is a parabola. Since
 \begin{align}
-    \myvec{-1 \\ 0}\label{eq:4}
+     \vec{Vp_{1}} = 0\\
+    \implies \vec{p_{1}} = \myvec{1 \\ 0}
 \end{align}
-Similarly substitute Eq \eqref{eq:3} in Eq \eqref{eq:2},
+The slope of the given line is m. The direction vector $\vec{m}$ would be
 \begin{align}
-\implies\myvec{3 & 2}\myvec{a \\ 0} - 12 = 0 \\
-\implies 3a - 12 = 0\\
-\implies a = 4
+   \vec{m} = \myvec{1 \\ m}\\
+   \vec{m}^T\vec{n} = 0\\
+   \vec{n} = \myvec{m \\ -1}
 \end{align}
-The intercept on x axis for Eq \eqref{eq:2} is
+Equation for point of contact for the parabola is 
 \begin{align}
-    \myvec{4 \\ 0}\label{eq:5}
+    \myvec{\vec{u}^T + \kappa \vec{n}^T \\ \vec{V}}\vec{q} = \myvec{-f \\ \kappa \vec{n} - \vec{u}}\\
+   where, \kappa = \frac{\vec{p}_{1}^T \vec{u}}{\vec{p}_{1}^T \vec{n}} = - \frac{2}{m}
 \end{align}
-To obtain the intersection of the lines Eq \eqref{eq:1} and Eq \eqref{eq:2},
+Substitute the values to get
 \begin{align}
-   \myvec{1 & -1 \\ 3 & 2}\vec{x} = \myvec{-1 \\ 12}
+   \myvec{-4 & \frac{2}{m} \\ 0 & 0 \\ 0 & 1}\vec{q} = \myvec{0 \\ 0 \\ \frac{2}{m}} \label{eq:3}
 \end{align}
-Row reduction for the above augmented matrix is as follows,
+Solving for $\vec{q}$ by removing the zero row and represent Eq \eqref{eq:3} as augmented matrix and convert it into echelon form
 \begin{align}
-\myvec{1 & -1 & -1 \\ 3 & 2 & 12}
-\xleftrightarrow{R_2\leftarrow \frac{R_2 - 3R_1}{5}}
-\myvec{1 & -1 & -1  \\ 0 & 1 & 3}\\
-\xleftrightarrow{R_1\leftarrow R_1 + R_2}
-\myvec{1 & 0 & 2 \\ 0 & 1 & 3}\\
-\implies \vec{x} = \myvec{2 \\ 3} \label{eq:6}
+\implies \myvec{-4 & \frac{2}{m} & 0 \\ 0 & 1 & \frac{2}{m}}
+\xleftrightarrow{R_1\leftarrow \frac{-R_1}{4}}
+\myvec{1 & -\frac{1}{2m} & 0 \\ 0 & 1 & \frac{2}{m}}\\
+\xleftrightarrow{R_1\leftarrow R_1 + \frac{1}{2m}R_2}
+\myvec{1 & 0 & \frac{1}{m^2} \\ 0 & 1 & \frac{2}{m}}\\
 \end{align}
-The triangle formed by Eq \eqref{eq:6}, Eq \eqref{eq:4} and Eq \eqref{eq:5} has vertices is shown in Fig \ref{Fig:1}
+The point of contact is $\myvec{\frac{1}{m^2} \\ \frac{2}{m}}$. Substitute this in Eq \eqref{eq: 1}
 \begin{align}
-    \vec{A} = \myvec{2 \\ 3}, \vec{B} = \myvec{-1 \\ 0}, \vec{C} = \myvec{4 \\ 0}
+    \myvec{-m & 1}\myvec{\frac{1}{m^2} \\ \frac{2}{m}} = 1\\
+    -\frac{1}{m} + \frac{2}{m} = 1\\
+    \frac{1}{m} = 1\\
+    \implies m = 1
 \end{align}
+Python Code to verify the result, 
+\begin{lstlisting}
+https://github.com/Hrithikraj2/MatrixTheory_EE5609/blob/master/Assignment_5/A5.py
+\end{lstlisting}
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{A5.png}
 \caption{}
 \label{Fig:1}
 \end{figure}
-Python Code to verify the result, 
-\begin{lstlisting}
-https://github.com/Hrithikraj2/MatrixTheory_EE5609/blob/master/Assignment_5/A5.py
-\end{lstlisting}
 \end{document}
