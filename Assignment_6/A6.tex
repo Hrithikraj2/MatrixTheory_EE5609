@@ -246,16 +246,16 @@ And the vertex $\vec{c}$ is given by
 \end{align}
 Substituting values from \eqref{eq:2},\eqref{eq:eta},\eqref{eq:p1val} in \eqref{eq:c},
 \begin{align}
-    \myvec{-4 & -7\\16 & 12\\12 & 9}\vec{c} = \myvec{-1\\4\\3}
+    \myvec{-1 & -7\\16 & 12\\12 & 9}\vec{c} = \myvec{-1\\4\\3}
 \end{align}
 To find $\vec{c}$, performing row reduction on the augmented matrix as follows:
 \begin{align}
-    \myvec{-4 & -7 & -1\\16 & 12 & 4\\12 & 9 & 3}\xleftrightarrow[R_1\leftarrow \frac{-1}{4}R_1]{R_3\leftarrow R_3-\frac{3}{4}R_2}\myvec{1 & \frac{7}{4} & \frac{1}{4}\\16 & 12 & 4\\0&0&0}\\
-    \xleftrightarrow{R_2\leftarrow R_2-16R_1}\myvec{1 & \frac{7}{4} & \frac{1}{4}\\0 & -16 & 0\\0&0&0}\\\xleftrightarrow{R_2\leftarrow \frac{-1}{16}R_2}\myvec{1 & \frac{7}{4} & \frac{1}{4}\\0 & 1 & 0\\0&0&0}\\\xleftrightarrow{R_1\leftarrow R_1-\frac{7}{4}R_2}\myvec{1 & 0 & \frac{1}{4}\\0 & 1 & 0\\0&0&0}
+    \myvec{-1 & -7 & -1\\16 & 12 & 4\\12 & 9 & 3}\xleftrightarrow[R_1\leftarrow -R_1]{R_3\leftarrow R_3-\frac{3}{4}R_2}\myvec{1 & 7 & 1\\16 & 12 & 4\\0&0&0}\\
+    \xleftrightarrow{R_2\leftarrow R_2-16R_1}\myvec{1 & 7 & 1\\0 & -100 & -12\\0&0&0}\\\xleftrightarrow{R_2\leftarrow \frac{-1}{100}R_2}\myvec{1 & 7 & 1\\0 & 1 & \frac{3}{5}\\0&0&0}\\\xleftrightarrow{R_1\leftarrow R_1-7R_2}\myvec{1 & 0 & 1\\0 & 1 & \frac{-16}{5}\\0&0&0}
 \end{align}
 Thus,
 \begin{align}
-    \vec{c} = \myvec{\frac{1}{4}\\0} %= \myvec{-2.4 \\ -1.8}
+    \vec{c} = \myvec{1\\\frac{-16}{5}} %= \myvec{-2.4 \\ -1.8}
 \end{align}
 \renewcommand{\thefigure}{1}
 \begin{figure}[h!]
