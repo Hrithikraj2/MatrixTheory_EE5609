@@ -7,7 +7,7 @@ import math
 fig = plt.figure()
 ax = fig.add_subplot(111, aspect='equal')
 len = 100
-y = np.linspace(-4,4,len)
+y = np.linspace(-0.5,0.5,len)
 
 #Generating points on a parabola
 def parab_gen(y,a):
