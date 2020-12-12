@@ -180,16 +180,17 @@ Download latex-tikz codes from
 https://github.com/Hrithikraj2/MatrixTheory_EE5609/blob/master/Assignment_8/A8.tex
 \end{lstlisting}
 \section{\textbf{Problem}}
-If A is an $m*n$ matrix, B is a $n*m$ matrix and $n<m$, then Prove that AB is not invertible. 
+If A is an $m \times n$ matrix, B is a $n \times m$ matrix and $n<m$, then Prove that AB is not invertible. 
 \section{\textbf{Solution}}
+\subsection{Part 1 : Proof}
 Let us represent A and B as follows
 \begin{align}
-     A = (a_{ij}) \in \Re^{m*n}\\
-     B = (b_{ij}) \in \Re^{n*m}
+     A = (a_{ij}) \in \Re^{m \times n}\\
+     B = (b_{ij}) \in \Re^{n \times m}
 \end{align}
-Let C = AB which would be an $m*m$ matrix.
+Let C = AB which would be an $m \times m$ matrix.
 \begin{align}
-    C = (c_{ij}) \in \Re^{m*m}\\
+    C = (c_{ij}) \in \Re^{m \times m}\\
     c_{ij} = \sum_{k=1}^{n} a_{ik}b_{kj}
 \end{align}
 for j=1,2,....,m. Let 
@@ -221,4 +222,17 @@ Because atleast two entries must be equal. Hence
           \abs{C} = 0
 \end{align}
 Since $\abs{AB} = 0$. Therefore, AB is not invertible.
+
+\subsection{Part 2:Example}
+Since we need to satisfy the condition $n<m$ Let A be a $2 \times 1$ matrix and B be a $1 \times 2$ matrix. Let
+\begin{align}
+    A = \myvec{a \\ b}\\
+    B = \myvec{c & d}
+\end{align}
+Then, AB would be
+\begin{align}
+    AB = \myvec{a \\ b}\myvec{c & d} = \myvec{ac & ad \\ bc & bd}\\
+    \abs{AB} = acbd - bcad = 0
+\end{align}
+Hence Proved.
 \end{document}
